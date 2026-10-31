@@ -1,0 +1,12 @@
+# Apni PC / VPS par always-on:  docker compose up -d --build   (restart: always)
+services:
+  kokoro-api:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+    ports:
+      - "8880:8880"
+    environment:
+      - API_KEY=change-me-strong-key
+      - KOKORO_VOICE=af_heart
+    restart: always

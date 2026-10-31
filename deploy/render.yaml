@@ -1,0 +1,14 @@
+# Render.com — hamesha-on API ke liye Standard plan ($25, 2GB) chahiye; Free/Starter 512MB = OOM (peak 558MB measured)
+# Use: New > Blueprint, ya Web Service > Docker, repo me ye folder push karke.
+services:
+  - type: web
+    name: kokoro-tts-api
+    runtime: docker
+    dockerfilePath: ./deploy/Dockerfile
+    plan: standard   # 2GB RAM — zaroori: service peak RAM 558MB measured; Free/Starter dono 512MB hain, OOM hogi
+    envVars:
+      - key: API_KEY
+        sync: false   # Render dashboard me apni key set karna — bots me KOKORO_API_KEY wahi wali
+      - key: KOKORO_VOICE
+        value: af_heart
+    healthCheckPath: /health
