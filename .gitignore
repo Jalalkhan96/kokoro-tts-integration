@@ -1,0 +1,11 @@
+# Kokoro model binaries are downloaded at install time, not committed.
+service/models/
+*.onnx
+*.bin
+__pycache__/
+.venv/
+clone-venv/
+pip-cache/
+.env
+audio-out/
+tmp/
