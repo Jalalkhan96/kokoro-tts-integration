@@ -1,0 +1,8 @@
+# Lightweight CPU stack (no PyTorch) — used by Docker/Render/HF deploys
+kokoro-onnx
+misaki
+soundfile
+numpy
+fastapi
+uvicorn[standard]
+pydantic

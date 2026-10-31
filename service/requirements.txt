@@ -1,0 +1,11 @@
+# Python 3.10 - 3.12 (3.10 recommended on Windows per your steps)
+kokoro>=0.9.2
+misaki[en]
+soundfile
+fastapi
+uvicorn[standard]
+pydantic
+# CPU torch is pulled by kokoro automatically.
+# Intel CPU / no GPU? That's fine — Kokoro-82M runs realtime on CPU.
+# If pip grabs a huge CUDA torch on Windows, force CPU wheel first:
+#   pip install torch --index-url https://download.pytorch.org/whl/cpu
